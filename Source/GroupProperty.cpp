@@ -3,7 +3,7 @@
 namespace FunkyProject {
 
 GroupProperty::GroupProperty(const Map& map) :
-    Property(map)
+    PropertyCRTP(map)
 {
 	values = std::any_cast<const Map&>(map.at("values"));
 }

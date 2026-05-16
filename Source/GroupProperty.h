@@ -4,7 +4,7 @@
 
 namespace FunkyProject {
 
-class GroupProperty : public Property<GroupProperty> {
+class GroupProperty : public PropertyCRTP<GroupProperty> {
 public:
 	explicit GroupProperty(const Map& map);
 

@@ -3,7 +3,7 @@
 namespace FunkyProject {
 
 IntegerProperty::IntegerProperty(const Map& map) :
-    Property{map}
+    PropertyCRTP{map}
 {
 	value_   = std::any_cast<int>(map.at("value"));
 	minimum_ = std::any_cast<int>(map.at("minimum"));

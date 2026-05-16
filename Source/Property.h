@@ -9,12 +9,8 @@ namespace FunkyProject {
 
 using Map = std::map<std::string, std::any>;
 
-template<typename Derived>
 class Property {
 public:
-	using TypeValue = Derived;
-	using Ptr       = std::unique_ptr<Derived>;
-
 	enum class Type {
 		Default,
 		String,
@@ -29,21 +25,35 @@ public:
 		Disabled
 	};
 
-	Property() = delete;
+	template<typename T>
+	T* as()
+	{
+		static_assert(std::is_base_of_v<Property, T>, "T must be a subclass of Property");
+		return static_cast<T*>(this);
+	}
+};
 
-	Property(const Property&)            = default;
-	Property& operator=(const Property&) = default;
-	Property(Property&&)                 = default;
-	Property& operator=(Property&&)      = default;
+template<typename Derived>
+class PropertyCRTP : public Property {
+public:
+	using TypeValue = Derived;
+	using Ptr       = std::unique_ptr<Derived>;
 
-	explicit Property(const Map& map)
+	PropertyCRTP() = delete;
+
+	PropertyCRTP(const PropertyCRTP&)            = default;
+	PropertyCRTP& operator=(const PropertyCRTP&) = default;
+	PropertyCRTP(PropertyCRTP&&)                 = default;
+	PropertyCRTP& operator=(PropertyCRTP&&)      = default;
+
+	explicit PropertyCRTP(const Map& map)
 	{
 		name_  = std::any_cast<std::string>(map.at("name"));
 		type_  = std::any_cast<Type>(map.at("type"));
 		state_ = std::any_cast<State>(map.at("state"));
 	}
 
-	virtual ~Property() = default;
+	virtual ~PropertyCRTP() = default;
 
 	Type type()
 	{

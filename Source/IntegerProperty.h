@@ -4,7 +4,7 @@
 
 namespace FunkyProject {
 
-class IntegerProperty : public Property<IntegerProperty> {
+class IntegerProperty : public PropertyCRTP<IntegerProperty> {
 public:
 	explicit IntegerProperty(const Map& map);
 
