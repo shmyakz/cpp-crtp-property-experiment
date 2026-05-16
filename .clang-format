@@ -1,0 +1,350 @@
+---
+#------------------------------------------------------------------------------
+# General settings
+#------------------------------------------------------------------------------
+BasedOnStyle: Microsoft
+Language: Cpp
+Standard: Latest
+
+
+#------------------------------------------------------------------------------
+# Indentation and alignment
+#------------------------------------------------------------------------------
+AlignAfterOpenBracket: AlwaysBreak
+AlignArrayOfStructures: Left
+
+AlignConsecutiveAssignments:
+  Enabled: true
+  AcrossEmptyLines: false
+  AcrossComments: true
+  AlignCompound: true
+  PadOperators: false
+
+AlignConsecutiveBitFields:
+  Enabled: true
+  AcrossEmptyLines: false
+  AcrossComments: true
+
+AlignConsecutiveDeclarations:
+  Enabled: true
+  AcrossEmptyLines: false
+  AcrossComments: true
+
+AlignConsecutiveMacros:
+  Enabled: true
+  AcrossEmptyLines: false
+  AcrossComments: true
+
+AlignConsecutiveShortCaseStatements:
+  Enabled: true
+  AcrossEmptyLines: false
+  AcrossComments: true
+  AlignCaseColons: false
+
+AlignEscapedNewlines: LeftWithLastLine
+AlignOperands: AlignAfterOperator
+
+AlignTrailingComments:
+  Kind: Always
+  OverEmptyLines: 1
+
+BracedInitializerIndentWidth: 4
+ConstructorInitializerIndentWidth: 4
+ContinuationIndentWidth: 8
+
+IndentAccessModifiers: false
+AccessModifierOffset: -4
+
+IndentCaseBlocks: false
+IndentCaseLabels: false
+IndentExternBlock: NoIndent
+IndentGotoLabels: false
+
+IndentPPDirectives: None
+PPIndentWidth: 0
+
+IndentRequiresClause: true
+RequiresClausePosition: OwnLine
+RequiresExpressionIndentation: OuterScope
+
+IndentWidth: 4
+IndentWrappedFunctionNames: true
+LambdaBodyIndentation: OuterScope
+NamespaceIndentation: None
+TabWidth: 4
+UseTab: ForIndentation
+
+
+#------------------------------------------------------------------------------
+# Spaces and padding
+#------------------------------------------------------------------------------
+BitFieldColonSpacing: Both
+SpaceAfterCStyleCast: true
+SpaceAfterLogicalNot: false
+SpaceAfterTemplateKeyword: false
+SpaceAroundPointerQualifiers: Default
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCaseColon: false
+SpaceBeforeCpp11BracedList: false
+SpaceBeforeCtorInitializerColon: true
+SpaceBeforeInheritanceColon: true
+
+SpaceBeforeParens: Custom
+SpaceBeforeParensOptions:
+  AfterControlStatements: false
+  AfterForeachMacros: false
+  AfterFunctionDeclarationName: false
+  AfterFunctionDefinitionName: false
+  AfterIfMacros: false
+  AfterOverloadedOperator: false
+  AfterPlacementOperator: true
+  AfterRequiresInClause: false
+  AfterRequiresInExpression: false
+  BeforeNonEmptyParentheses: false
+
+SpaceBeforeRangeBasedForLoopColon: true
+SpaceBeforeSquareBrackets: false
+SpaceInEmptyBlock: false
+SpacesBeforeTrailingComments: 1
+SpacesInAngles: false
+SpacesInContainerLiterals: false
+
+SpacesInLineCommentPrefix:
+  Minimum: 1
+  Maximum: 1
+
+SpacesInParens: Never
+SpacesInSquareBrackets: false
+
+
+#------------------------------------------------------------------------------
+# Line breaks and wrapping
+#------------------------------------------------------------------------------
+AllowAllArgumentsOnNextLine: false
+AllowAllParametersOfDeclarationOnNextLine: false
+AllowBreakBeforeNoexceptSpecifier: OnlyWithParen
+AllowShortBlocksOnASingleLine: Never
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortCompoundRequirementOnASingleLine: true
+AllowShortEnumsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: None
+AllowShortLambdasOnASingleLine: None
+AllowShortLoopsOnASingleLine: false
+AlwaysBreakAfterDefinitionReturnType: None
+AlwaysBreakAfterReturnType: None
+AlwaysBreakBeforeMultilineStrings: true
+AlwaysBreakTemplateDeclarations: Yes
+BinPackArguments: false
+BinPackParameters: false
+
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterCaseLabel: false
+  AfterClass: false
+  AfterControlStatement: Never
+  AfterEnum: false
+  AfterFunction: true
+  AfterNamespace: false
+  AfterStruct: false
+  AfterUnion: false
+  AfterExternBlock: false
+  BeforeCatch: true
+  BeforeElse: true
+  BeforeLambdaBody: false
+  BeforeWhile: false
+  IndentBraces: false
+  SplitEmptyFunction: true
+  SplitEmptyRecord: false
+  SplitEmptyNamespace: false
+
+BreakAfterAttributes: Leave
+BreakBinaryOperations: Never
+BreakBeforeBinaryOperators: All
+BreakBeforeConceptDeclarations: Always
+BreakBeforeInlineASMColon: OnlyMultiline
+BreakBeforeTernaryOperators: true
+BreakConstructorInitializers: AfterColon
+BreakInheritanceList: AfterColon
+BreakStringLiterals: true
+ColumnLimit: 125
+CompactNamespaces: false
+PackConstructorInitializers: Never
+
+PenaltyBreakAssignment: 500
+PenaltyBreakBeforeFirstCallParameter: 0
+PenaltyBreakComment: 10
+PenaltyBreakFirstLessLess: 10
+PenaltyBreakOpenParenthesis: 10
+PenaltyBreakScopeResolution: 1200
+PenaltyBreakString: 10
+PenaltyBreakTemplateDeclaration: 200
+PenaltyExcessCharacter: 10000
+PenaltyIndentedWhitespace: 10
+PenaltyReturnTypeOnItsOwnLine: 500
+
+
+#------------------------------------------------------------------------------
+# Lines
+#------------------------------------------------------------------------------
+EmptyLineAfterAccessModifier: Never
+EmptyLineBeforeAccessModifier: Always
+InsertNewlineAtEOF: true
+KeepEmptyLinesAtEOF: false
+KeepEmptyLinesAtTheStartOfBlocks: false
+LineEnding: LF
+MaxEmptyLinesToKeep: 1
+SeparateDefinitionBlocks: Always
+
+#------------------------------------------------------------------------------
+# Pointer and reference styles
+#------------------------------------------------------------------------------
+DerivePointerAlignment: false
+PointerAlignment: Left
+ReferenceAlignment: Left
+
+QualifierAlignment: Custom
+QualifierOrder: [ 'friend', 'static', 'inline', 'constexpr', 'const', 'type' ]
+
+
+#------------------------------------------------------------------------------
+# Includes
+#------------------------------------------------------------------------------
+# Keep user-separated include blocks separate, but sort includes inside each block.
+IncludeBlocks: Preserve
+
+# Categories are matched from top to bottom: the first matched regexp stops further matching
+IncludeCategories:
+  # Headers matching the name of the component are matched automatically
+  # - Priority:     0
+  #   SortPriority: 0
+
+  # Local headers
+  - Regex: '"([[:alnum:]._-]+/[[:alnum:]._-]+/[[:alnum:]._-]+/)+[[:alnum:]._-]+\.hp*"'
+    Priority: 1
+    SortPriority: 11
+
+  - Regex: '"([[:alnum:]._-]+/[[:alnum:]._-]+/)+[[:alnum:]._-]+\.hp*"'
+    Priority: 1
+    SortPriority: 12
+
+  - Regex: '"([[:alnum:]._-]+/)+[[:alnum:]._-]+\.hp*"'
+    Priority: 1
+    SortPriority: 13
+
+  - Regex: '"[[:alnum:]._-]+\.hp*"'
+    Priority: 1
+    SortPriority: 14
+
+  # ImGui headers
+  - Regex: '"(imgui|implot|imnodes|backends)/.*"'
+    Priority: 2
+    SortPriority: 21
+
+  - Regex: '"(imgui|implot|imnodes)[[:alnum:]._-]*\.hp*"'
+    Priority: 2
+    SortPriority: 22
+
+  - Regex: '<(imgui|implot|imnodes|backends)/.*>'
+    Priority: 2
+    SortPriority: 23
+
+  - Regex: '<(imgui|implot|imnodes)[[:alnum:]._-]*\.hp*>'
+    Priority: 2
+    SortPriority: 24
+
+  # Platform and system headers
+  - Regex: '<windows\.h>'
+    Priority: 3
+    SortPriority: 25
+
+  - Regex: '<d3d[[:alnum:]._-]*\.h>'
+    Priority: 3
+    SortPriority: 26
+
+  - Regex: '<dxgi[[:alnum:]._-]*\.h>'
+    Priority: 3
+    SortPriority: 27
+
+  # Global headers
+  - Regex: '<([[:alnum:]._-]+/[[:alnum:]._-]+/[[:alnum:]._-]+/)+[[:alnum:]._-]+\.hp*>'
+    Priority: 4
+    SortPriority: 31
+
+  - Regex: '<([[:alnum:]._-]+/[[:alnum:]._-]+/)+[[:alnum:]._-]+\.hp*>'
+    Priority: 4
+    SortPriority: 32
+
+  - Regex: '<([[:alnum:]._-]+/)+[[:alnum:]._-]+\.hp*>'
+    Priority: 4
+    SortPriority: 33
+
+  - Regex: '<[[:alnum:]._-]+\.hp*>'
+    Priority: 4
+    SortPriority: 34
+
+  # Qt headers
+  - Regex: '<Q[[:alnum:]._-]+/Q[[:alnum:]._-]+>'
+    Priority: 5
+    SortPriority: 41
+
+  - Regex: '<Q[[:alnum:]._-]+>'
+    Priority: 5
+    SortPriority: 42
+
+  # C++ standard library headers
+  - Regex: '<[[:alnum:]._-]+>'
+    Priority: 6
+    SortPriority: 51
+
+  # Any unmatched line, separated from the last group
+  - Regex: '.*'
+    Priority: 100
+    SortPriority: 100
+
+#IncludeIsMainRegex:
+#IncludeIsMainSourceRegex:
+SortIncludes: CaseSensitive
+
+
+#------------------------------------------------------------------------------
+# Special categories
+#------------------------------------------------------------------------------
+#AttributeMacros:
+#CommentPragmas:
+ForEachMacros: [ 'Q_FOREACH', 'foreach' ]
+IfMacros: [ 'SCOPE_EXIT', 'SCOPE_FAIL', 'SCOPE_SUCCESS' ]
+#MacroBlockBegin:
+#MacroBlockEnd:
+#Macros: []
+#NamespaceMacros:
+#RawStringFormats:
+StatementAttributeLikeMacros: [ 'emit', 'Q_EMIT' ]
+StatementMacros: [ 'Q_UNUSED' ]
+#TypeNames:
+#TypenameMacros:
+#WhitespaceSensitiveMacros:
+
+
+#------------------------------------------------------------------------------
+# Other
+#------------------------------------------------------------------------------
+Cpp11BracedListStyle: true
+#ExperimentalAutoDetectBinPacking ?
+FixNamespaceComments: true
+#InsertBraces ?
+WrapNamespaceBodyWithEmptyLines: Always
+
+IntegerLiteralSeparator:
+  Binary: 8
+  Decimal: 3
+  DecimalMinDigits: 7
+  Hex: 4
+  HexMinDigits: 9
+
+ReflowComments: true
+#RemoveBracesLLVM ?
+#RemoveParentheses ?
+#RemoveSemicolon ?
+ShortNamespaceLines: 5
+SkipMacroDefinitionBody: true
+SortUsingDeclarations: LexicographicNumeric
